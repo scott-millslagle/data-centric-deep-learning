@@ -77,10 +77,10 @@ class DigitClassifierFlow(FlowSpec):
     # tool that makes logging in the cloud easy. 
     # 
     # wandb_logger = WandbLogger(
-    #   project = config.wandb.project, 
+    #   project = config.wandb.project,
     #   offline = False,
-    #   entity = config.wandb.entity, 
-    #   name = 'mnist', 
+    #   entity = config.wandb.entity,
+    #   name = 'mnist',
     #   save_dir = 'logs/wandb',
     #   config = config)
 
