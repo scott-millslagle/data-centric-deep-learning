@@ -58,8 +58,9 @@ def build_regression_test(system, loader):
     # the actual prediction is the argmax of the logits
     preds = torch.argmax(logits, dim=1)
 
-    batch_is_correct = []
-    batch_loss = []
+    batch_is_correct = (preds == labels).long().numpy().tolist()
+    batch_loss = F.cross_entropy(logits, labels, reduction='none')
+    batch_loss = batch_loss.numpy().tolist()
     # ================================
     # FILL ME OUT
     # 
